@@ -1,0 +1,64 @@
+<%- include('Partials/header') %>
+
+<div class="card home-me-card me-card ">
+  <div class="top me-top">
+
+    <img class="circle-img me-circle-img" src="https://pbs.twimg.com/profile_images/625247595825246208/X3XLea04_400x400.jpg" alt="avatar_img" />
+  </div>
+  <div class="bottom me-bottom">
+    <h1 class="me-name"><%=user.username%></h1>
+    <h3><%=user.college%></h3>
+    <p class="info "><%=user.company%></p>
+    <p class="info "><%=user.address%></p>
+    <%if(isfriend=="no"){%>
+    <form action="/friends/<%=user.username%>" method="post">
+      <button class="btn btn-warning" type="submit" name="button" style="float:right;">Follow</button>
+    </form>
+    <%}%>
+    <%if(isfriend=="yes"){%>
+      <button class="btn btn-warning" type="disabled" name="button" style="float:right;">Following</button>
+    <%}%>
+  </div>
+</div>
+
+<!-- bootstrap carousel -->
+  <section id="testimonials">
+<div id="testimonial-carousel" class="carousel slide" data-bs-ride="false">
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="2000">
+      <h1 class="testimonial-text">Skills & endorsement</h1>
+    </div>
+
+    <% user.skills.forEach(function(skill){%>
+      <div class="carousel-item" data-bs-interval="2000" >
+        <h1><%=skill%></h1>
+      </div>
+    <% }); %>
+  </div>
+  <a class="carousel-control-prev"  role="button" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span></a>
+  <a class="carousel-control-next" href="#testimonial-carousel" role="button" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span></a>
+</div>
+</section>
+
+<div class="card me-education-card" >
+  <div class="card-body">
+    <h2 class="card-title">About </h2>
+    <hr>
+    <h4 class="card-text"> <%=user.about%></h4>
+  </div>
+</div>
+
+
+<div class="card me-education-card" style="margin-bottom:200px;height:auto;">
+  <div class="card-body">
+    <h2 class="card-title">Experience </h2>
+    <% user.experiences.forEach(function(experience){%>
+      <h4 class="card-text"><%=user.experience%></h4>
+      <hr>
+    <% }); %>
+  </div>
+</div>
+
+<%- include('Partials/footer') %>

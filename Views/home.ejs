@@ -1,0 +1,132 @@
+<%- include('Partials/header'); %>
+<!-- <span><h6>Follow</h6></span> -->  <!-- ·  --><!-- add time here -->
+
+<div class="card home-me-card " style="margin-top: 10px;position:fixed;">
+  <div class="top">
+    <img class=" home-circle-img" src="data:image/images/png;base64,<%=user.data.toString("base64")%>" alt="add image">
+  </div>
+  <div class="bottom">
+    <!-- .split(" ",[1]) -->
+    <h1 class="name"><%=user.username%></h1>
+    <h3 class="info"><%=user.college%></h3>
+    <h3 class="info"><%=user.company%></h3>
+    <br>
+    <a class="anchor-tags" href="/me"><i class="fas fa-marker"></i></a>
+  </div>
+</div>
+
+
+<div class="pqr">
+  <h3>  News Section </h3><hr>
+  <br><br><br><br><br><br>
+  <!-- <p>    giuef gu i hr     </p>
+  <p>    giuef gu i hr     </p>
+  <p>    giuef gu i hr     </p>
+  <p>    giuef gu i hr     </p> -->
+  <br><br><br><br><br><br>
+</div>
+
+<div class="post-card " style="padding:10px;">
+    <img class=" post-circle-img" src="data:image/images/png;base64,<%=user.data.toString("base64")%>" alt="add image">
+    <a href="/images">
+    <input type="text" class="form-control comment-textarea"  placeholder="Share a post..."></input></a>
+  <div class="home-btns">
+    <a class="home-btn btn-outline-info" href="/images" style="margin-left:35px;"><i class="fas fa-marker"></i></a>
+    <a class="home-btn btn-outline-warning" href="/images"><i class="fas fa-images"></i></a>
+    <a class="btn-outline-danger home-btn" href="/images"><i class="fas fa-file-alt"></i></a>
+    <a class="home-btn btn-outline-primary" href="/images"><i class="fas fa-share"></i></a>
+  </div>
+</div>
+
+
+<div class="post-card " >
+
+  <img class="post-circle-img" src="https://pbs.twimg.com/profile_images/625247595825246208/X3XLea04_400x400.jpg" alt="avatar_img">
+
+  <div class="post-heading">
+    <span >SANCHIT GARG  </span>
+    <!-- <span><h6>Follow</h6></span>  ·  add time here -->
+    <h6 >MotiLal Nehru NIT  Allahabad</h6>
+  </div>
+  <h4>Looking for a detailed explanation of Garbage Collection </h4>
+  <img class="post-image" src="https://pbs.twimg.com/profile_images/625247595825246208/X3XLea04_400x400.jpg" alt="avatar_img">
+  <h6 class="small-words"><i class="fas fa-thumbs-up"></i> <i class="fas fa-heart"></i> <i class="fas fa-laugh-squint"></i> · 64 Comments </h6>
+  <hr style="margin-top: 0;"/>
+
+
+<form class="" action="/comment" method="post">
+  <div class="home-btns">
+    <button type="submit" name="like" class="btn btn-outline-info btn-sm home-btn"><i class="fas fa-thumbs-up"></i></button>
+    <button type="submit" name="heart" class="btn btn-outline-danger btn-sm home-btn"><i class="fas fa-heart"></i></button>
+    <button type="submit" name="postname" value="" class="btn btn-outline-warning btn-sm home-btn"><i class="fas fa-laugh-squint"></i></button>
+    <button type="submit" name="comment" class="btn btn-outline-primary btn-sm home-btn"><i class="fas fa-comments"></i></button>
+  </div>
+  <img class=" post-circle-img" src="data:image/images/png;base64,<%=user.data.toString("base64")%>" alt="add image">
+    <input type="text" name="comments" class="form-control comment-textarea"  placeholder="Add a comment..."></input>
+</form>
+
+  <div class=" comments-section">
+    <span >SANCHIT GARG  </span>
+    <h6 >MotiLal Nehru NIT  Allahabad</h6>
+  </div>
+  <div class=" comments-section">
+    <span >SANCHIT GARG  </span>
+    <h6 >MotiLal Nehru NIT  Allahabad MotiLal Nehru NIT  Allahabad MotiLal Nehru NIT  Allahabad MotiLal Nehru NIT  Allahabad</h6>
+  </div>
+
+</div>
+
+
+<%subscribers.forEach(function(subscriber){%>
+  <%subscriber.feeds.forEach(function(feed){%>
+<div class="post-card " >
+
+  <!-- <img class="post-circle-img" src="https://pbs.twimg.com/profile_images/625247595825246208/X3XLea04_400x400.jpg" alt="avatar_img"> -->
+  <img class="post-circle-img" src="data:image/images/png;base64,<%=subscriber.data.toString("base64")%>" alt="add image">
+
+  <div class="post-heading">
+    <span ><%=subscriber.username%></span>
+    <h6 ><%=subscriber.usercollege%></h6>
+    </div>
+    <h4><%=feed.postext%></h4>
+  <!-- <img class="post-image" src="https://pbs.twimg.com/profile_images/625247595825246208/X3XLea04_400x400.jpg" alt="avatar_img"> -->
+  <img class="post-image" src="data:image/images/png;base64,<%=feed.postdata.toString("base64")%>" alt="add image">
+  <h6 class="small-words"><i class="fas fa-thumbs-up"></i> <i class="fas fa-heart"></i>
+        <i class="fas fa-laugh-squint"></i> ·<%=subscriber.plus%> Likes · <%=subscriber.comments.length%> Comments </h6>
+  <hr style="margin-top: 0;"/>
+
+
+<form class="" action="/likes" method="post">
+  <div class="home-btns">
+    <input type="hidden" name="subscriber" value="<%=subscriber._id%>">
+    <button type="submit" name="like" class="btn btn-outline-info btn-sm home-btn"><i class="fas fa-thumbs-up"></i></button>
+    <button type="submit"  class="btn btn-outline-danger btn-sm home-btn"><i class="fas fa-heart"></i></button>
+    <button type="submit"  class="btn btn-outline-warning btn-sm home-btn"><i class="fas fa-laugh-squint"></i></button>
+    <button type="submit" name="comment" class="btn btn-outline-primary btn-sm home-btn"><i class="fas fa-smile-beam"></i></button>
+    <!-- <button type="submit" name="comment" class="btn btn-outline-primary btn-sm home-btn"><i class="fas fa-comments"></i></button> -->
+  </div>
+</form>
+<form class="" action="/comment" method="post">
+  <input type="hidden" name="feedid" value="<%=feed._id%>">
+  <input type="hidden" name="subscriber" value="<%=subscriber._id%>">
+  <img class=" post-circle-img" src="data:image/images/png;base64,<%=user.data.toString("base64")%>" alt="add image">
+    <input type="text" name="comments" class="form-control comment-textarea"  placeholder="Add a comment..."></input>
+</form>
+
+<% subscriber.comments.forEach(function(comment){%>
+  <div class=" comments-section">
+    <span ><%=comment.username%></span>
+    <h6 ><%=comment.comment%></h6>
+  </div>
+<% }); %>
+
+</div>
+<% }); %>
+<% }); %>
+
+
+<!-- <div class="spinner-border text-info" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div> -->
+
+<%- include('Partials/footer'); %>

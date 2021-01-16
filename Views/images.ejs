@@ -1,0 +1,26 @@
+<%- include('Partials/header'); %>
+
+<div class="" style="text-align:center;">
+  <h1> Upload POST on LinkedUp</h1><br>
+    <form action="/feedpost" method="POST" enctype="multipart/form-data">
+        <textarea rows="5px" type="text" name="postext" style="width:400px;"
+        placeholder="Add Text, and let others know more...."></textarea><br><br>
+        <input type="file"	name="image" value="" required>
+        <button type="submit" class="btn btn-warning btn-sm" >Submit</button>
+    </form>
+</div>
+<br><hr><br>
+  <div class="" style="text-align:center;">
+		<h1>Update Profile Picture </h1>
+		<br><br>
+			<form action="/images" method="POST" enctype="multipart/form-data">
+					<!-- <label for="image">Upload Image</label> -->
+					<input type="file"	name="image" value="" required>
+					<button class="btn btn-warning btn-sm" type="submit">Submit</button>
+			</form><br><br>
+		<!-- <hr> -->
+		<h1>Currently Uploaded </h1>
+		<img src="data:image/images/png;base64,<%=user.data.toString("base64")%>" alt="add image">
+	</div>
+  <br>
+<%- include('Partials/footer'); %>

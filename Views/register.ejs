@@ -1,0 +1,21 @@
+<%- include('Partials/header') %>
+
+<form class="row g-3 register-login-form" action="/register" method="post">
+  <div class="col-md-7">
+    <label class="form-label">Username</label>
+    <input type="text" class="form-control" name="username" placeholder="Alex.." autocomplete="false">
+  </div>
+  <div class="col-md-7">
+    <label class="form-label">Email</label>
+    <input type="email" class="form-control" name="email" placeholder="Enter Your Email id" autocomplete="false" autofocus>
+  </div>
+  <div class="col-md-7">
+    <label class="form-label">Password</label>
+    <input type="password" class="form-control" name="password" placeholder="Create Password" autocomplete="false">
+  </div>
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary">Sign in</button>
+  </div>
+</form>
+
+<%- include('Partials/footer') %>

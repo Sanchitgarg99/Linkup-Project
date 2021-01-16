@@ -1,0 +1,384 @@
+body {
+  font-family: sans-serif;
+  background-color: #e8eae6;
+  /* text-align: center; */
+}
+
+.container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+/* Navbar  Styling Starts*/
+.navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 10px;
+    font-size: 10px;
+    letter-spacing: 5px;
+}
+.navbar-nav  li a:hover {
+    color: #1abc9c ;
+}
+.compose-elements{
+  display: block;
+  margin: 1rem;
+}
+.nav-sizes{
+  height:100px;
+  padding-left:20px;
+}
+/* Footer Styling Starts */
+.footer {
+	/* position: relative; */
+	text-align: center;
+	bottom: 0;
+  margin-bottom: 0;
+	width: 100%;
+	height: 100px;
+	background-color: #1abc9c;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  display: inline-block;
+}
+.footer p {
+	margin-top: 25px;
+	font-size: 12px;
+  color: #fff;
+}
+/* Card Styling Starts*/
+.home-me-card{
+  border-radius: 25px;
+  position: relative;
+  padding: 25px 15px;
+  background-color: #fff;
+  height: 400px;
+  box-shadow: 0 2px 5px #ccc;
+  text-align: left;
+  width :330px;
+  margin:3rem;
+  display:inline-block;
+  float: left;
+  margin-left: 5rem;
+}
+.top {
+  border-radius: 25px 25px 0 0;
+  height: 100px;
+  width: 100%;
+  background-color: #6f9eaf;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+}
+.name {
+  font-size: 2em;
+  color: #2d3436;
+  display: flex;
+  flex: 1;
+  margin: 10% 20px 0;
+  margin-top: 70px;
+  margin-left: 6px;
+  /* font-weight: bold; */
+}
+.card img {
+  margin: 30px 20px 0 0;
+}
+.circle-img {
+  border-radius: 50%;
+  border: 7px solid #fff;
+  width: 120px;
+  height: 120px;
+}
+.home-circle-img{
+  border-radius: 50%;
+  border: 7px solid #EAF6F6;
+  width: 120px;
+  height: 120px;
+  display: block;
+  position: absolute;
+  left:20px;
+}
+.bottom {
+  margin-top:50px;
+  padding-top: 10px;
+  /* height: 50%; */
+}
+.info {
+  font-size: 15px;
+  margin: 15px 0;
+  margin-left: 6px;
+  color: grey;
+}
+/* Card Styling Ends */
+.abc{
+  /* this is for new feed........ */
+  position: relative;
+  display: inline-block;
+  float: center;
+}
+.pqr{
+  /* this is for news section on home page */
+  display: inline-block;
+  float: right;
+  margin-top: 10px;
+  margin-left: 1000px;
+  position: fixed;
+  background-color: #fff;
+  border-radius: 25px;
+  padding: 30px;
+  padding-left: 40px;
+  padding-right: 120px;
+}
+/* login and registration form only styling :- */
+.register-login-form{
+  margin: 50px;
+  background-color: #fff;
+  margin-bottom: 130px;
+  padding: 30px;
+  padding-right: 0;
+  border-radius: 25px;
+  width:40%;
+  margin-left: 500px;
+  margin-top: 140px;
+}
+/* me card styling starts */
+/* Note: me card styling starts from simple card(home card) then me-card   */
+.me-card{
+  width: 60%;
+  height: 500px;
+  display: block;
+  margin-left: 100px;
+  /* background-color: #e8eae6; */
+  background-color: #fff ;
+}
+.me-top{
+  background-color: #583d72;
+  height:30%;
+}
+.me-name{
+  font-size: 3rem;
+  color: #2d3436;
+  display: block;
+  margin: 1% 20px 0;
+  margin-left: 0;
+  padding-bottom: 1rem;
+
+}
+.me-circle-img{
+  height:180px;
+  width: 180px;
+  position: absolute;
+  right:  100px;
+}
+.me-bottom{
+  display: block;
+  margin: 20px;
+  margin-top: 100px;
+  padding: 50px;
+  padding-left:0;
+}
+.info-form{
+  display: block;
+  /* margin: 10px; */
+  background-color: #fff;
+  /* margin-bottom: 30px; */
+  padding: 40px;
+  padding-top:100px;
+  /* padding-bottom: 50px; */
+  /* border-radius: 25px; */
+  padding-left: 180px;
+}
+.education-card{
+  float: left;
+  /* display: block; */
+  /* margin: 10px; */
+  /* background-color: #fff; */
+  margin-bottom: 200px;
+  margin-left: 100px;
+  width: 60%;
+  height:200px;
+  border-radius: 25px;
+  display: flex;
+}
+
+
+#testimonials{
+  background-color: #583d72 ;
+  color:#fff;
+  display: inline-block;
+  /* position: absolute; */
+  height:200px;
+  /* margin-top: 600px; */
+  width: 60%;
+  margin-left: 100px;
+  margin-bottom: 25px;
+  border-radius: 25px;
+}
+.carousel-item{
+  padding: 7% 15% ;
+}
+.testimonial-image{
+  width: 10% ;
+  border-radius: 100% ;
+  margin: 20px ;
+}
+#testimonials{
+  font : #fff ;
+  text-align: center;
+}
+.me-education-card{
+  background-color: #fff;
+  /* color:#fff; */
+  display: inline-block;
+  height:240px;
+  width: 60%;
+  margin-left: 100px;
+  margin-bottom: 25px;
+  border-radius: 25px;
+  padding: 10px;
+  padding-bottom: 0;
+  font-size: 2rem;
+  /* font-weight: 400; */
+  margin-top: 0;
+  line-height: 2;
+}
+.me-add-info{
+  margin-left: 0;
+  width: 25%;
+  margin-top: 50px;
+  height: 150px;
+  background-color: #f8f7de;
+}
+.post-card{
+  position: relative;
+  display: inline-block;
+  float: center;
+  padding: 10px;
+  width: 500px;
+  background-color: #fff;
+  padding-bottom: 0;
+  border-radius: 10px;
+  margin-left:450px;
+  margin-top: 10px;
+}
+.post-circle-img {
+  border-radius: 50%;
+  border: 2px solid #black;
+  width: 45px;
+  height: 45px;
+  margin: 8px;
+  margin-bottom: 13px;
+}
+
+.post-heading{
+  /* float:right; */
+  display: inline-block;
+  position: absolute;
+  padding-top:8px;
+}
+.post-image{
+  width:100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+  /* height: 400px; */
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+}
+.small-words{
+  font-size: 10px;
+  color: #48426d;
+}
+.home-btns{
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.home-btn{
+  margin-right: 70px;
+  /* padding-left: 40px; */
+  /* padding-right: 40px; */
+  border-width: 0;
+  border-radius: 100%;
+}
+.comments-section{
+  border-radius: 10px;
+  padding: 20px;
+  padding-left: 10px;
+  background-color:  #e8eae6;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: #48426d;
+  width: 100%;
+  margin-bottom: 10px;
+  /* float: right; */
+}
+.comment-textarea{
+  display: inline-block;
+  width:85%;
+  border-radius: 25px;
+}
+.spinner-border{
+  display:block;
+  /* margin-left: 630px; */
+  margin-left: 48%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.anchor-tags{
+  border-width: 0;
+  border-radius: 100%;
+  float: right;
+}
+.skills-more{
+  margin-left: 250px;
+  margin-top: 80px;
+  padding: 30px;
+  width: 40%;
+  background-color: #fff;
+  padding-right: 200px;
+  padding-left: 100px;
+}
+.network-info{
+  position: relative;
+  padding: 25px 15px;
+  text-align: left;
+  margin:3rem;
+  display:inline-block;
+  margin-left: 100px;
+  border-radius: 25px;
+  background-color: #fff ;
+  width:350px;
+  height:350px;
+  padding-top:0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.network-card{
+  float: right;
+  display:inline-block;
+  width:58%;
+  height:auto;
+  background-color: white;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  margin-right: 80px;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 10px;
+}
+.network-info-card{
+  border-radius: 25px;
+  /* position: relative; */
+  padding: 25px 15px;
+  background-color: #fff;
+  height: 330px;
+  box-shadow: 0 2px 5px #ccc;
+  text-align: left;
+  width :auto;
+  margin:20px;
+  display:inline-block;
+  float: left;
+}
+.my-friends{
+  margin: 15px;
+}

@@ -1,0 +1,36 @@
+<%- include('Partials/header') %>
+
+
+
+     <form class="row g-3 info-form" action="/info" method="post" >
+ <div class=" col-md-5 ">
+
+   <label class="form-label">Email</label>
+   <input type="email" class="form-control" name="email" value="<%=user.email%>" placeholder="Update Your Email id" autocomplete="false" >
+ </div>
+ <div class="col-md-1">
+   <label class="form-label">Age</label>
+   <input type="integer" class="form-control" name="age" value="<%=user.age%>" placeholder="Age" autocomplete="false">
+ </div>
+ <div class="col-7">
+   <label class="form-label">Institution</label>
+   <input type="text" class="form-control" name="college" value="<%=user.college%>" placeholder="Update Institution/College">
+ </div>
+ <div class="col-7">
+   <label class="form-label">School</label>
+   <input type="text" class="form-control" name="school" value="<%=user.school%>" placeholder="Add School Details">
+ </div>
+ <div class="col-7">
+   <label class="form-label">Address</label>
+   <input type="text" class="form-control" name="address" value="<%=user.address%>" placeholder="1234 Main St...">
+ </div>
+ <div class="col-7">
+   <label class="form-label">About</label>
+   <textarea type="text" class="form-control" name="about" rows="5px" value="<%=user.about%>" placeholder="Add your info , which would help Companies to know about You"></textarea>
+ </div>
+ <div class="col-12" style="margin-left:590px;margin-top:100px;margin-bottom:50px;">
+   <button type="submit" class="btn btn-lg btn-warning">Update Profile</button>
+ </div>
+</form>
+
+<%- include('Partials/footer') %>

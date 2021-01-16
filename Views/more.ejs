@@ -1,0 +1,37 @@
+<%- include('Partials/header'); %>
+
+
+<div class="skills-more">
+  <h1>Skills</h1><br><hr>
+  <% userskills.forEach(function(skill){%>
+    <form action="/deletemore/skills" method="post">
+      <button type="submit" class="btn btn-secondary btn-sm"  name="infotodelete" value="<%= skill %>" > Remove</button>
+      <label ><%= skill %></label>
+    </form>
+    <br>
+  <% }); %>
+  <form  action="/addmore/skills" method="post">
+    <input type="text" name="infotoadd" placeholder="New Item" >
+    <button class="btn btn-outline-warning btn-sm" type="submit">+</button>
+  </form>
+</div>
+
+
+<div class="skills-more" style="margin-bottom:150px;">
+  <h1>Experience</h1><br><hr>
+  <% userexperience.forEach(function(experience){%>
+    <form action="/deletemore/experiences" method="post">
+      <button class="btn btn-secondary btn-sm" type="submit" name="infotodelete" value="<%= experience %>" >
+        Remove</button>
+      <label ><%= experience %></label>
+    </form>
+    <br>
+  <% }); %>
+  <form  action="/addmore/experiences" method="post">
+    <input type="text" name="infotoadd" placeholder="New Item" >
+    <button class="btn btn-outline-warning btn-sm" type="submit">+</button>
+  </form>
+</div>
+
+
+<%- include('Partials/footer'); %>

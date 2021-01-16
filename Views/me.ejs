@@ -1,0 +1,72 @@
+<%- include('Partials/header') %>
+
+<div class="card home-me-card me-card ">
+  <div class="top me-top">
+
+    <img class="circle-img me-circle-img" src="https://pbs.twimg.com/profile_images/625247595825246208/X3XLea04_400x400.jpg" alt="avatar_img" />
+  </div>
+  <div class="bottom me-bottom">
+    <h1 class="me-name"><%=user.username%></h1>
+    <h3><%=user.college%></h3>
+    <p class="info "><%=user.company%></p>
+    <p class="info "><%=user.address%><a class="anchor-tags" href="/info"><i class="fas fa-marker"></i></a></p>
+  </div>
+</div>
+
+<div class="card me-education-card me-add-info" style="height:auto;">
+  <div class="card-body">
+    <h4 class="card-title">Edit public profile <a class="anchor-tags" href="/info"><i class="fas fa-marker"></i></a></h4>
+    <hr>
+    <h4 class="card-text"> Edit Info & URL <a class="anchor-tags" href="/more"><i class="fas fa-marker"></i></a></h4>
+    <hr>
+    <h4 class="card-text"> Edit Profile Picture & more<a class="anchor-tags" href="/images"><i class="fas fa-marker"></i></a></h4>
+  </div>
+</div>
+
+<!-- bootstrap carousel -->
+  <section id="testimonials">
+<div id="testimonial-carousel" class="carousel slide" data-bs-ride="false">
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="2000">
+      <h1 class="testimonial-text">Skills & endorsement</h1>
+      <!-- <em>Beverly, Illinois</em> -->
+    </div>
+
+    <% user.skills.forEach(function(skill){%>
+      <div class="carousel-item" data-bs-interval="2000" >
+        <h1><%=skill%></h1>
+      </div>
+    <% }); %>
+      <!-- <em>Pebbles, New York </em><em>Pebbles, New York</em>-->
+  </div>
+  <a class="carousel-control-prev"  role="button" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span></a>
+  <a class="carousel-control-next" href="#testimonial-carousel" role="button" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span></a>
+</div>
+</section>
+
+<div class="card me-education-card" >
+  <div class="card-body">
+    <h2 class="card-title">About </h2>
+    <h6 class="card-subtitle mb-2 text-muted">Let others know more about You</h6>
+    <hr>
+    <h4 class="card-text"> <%=user.about%><a class="anchor-tags" href="/info"><i class="fas fa-marker"></i></a></h4>
+  </div>
+</div>
+
+
+<div class="card me-education-card" style="margin-bottom:200px;height:auto;">
+  <div class="card-body">
+    <h2 class="card-title">Experience </h2>
+    <hr>
+    <% user.experiences.forEach(function(experience){%>
+      <h4 class="card-text"><%=user.experience%></h4>
+      <hr>
+  </div>
+    <% }); %>
+  <a class="anchor-tags" href="/more"><i class="fas fa-marker"></i></a>
+  </div>
+<!-- </div> -->
+
+<%- include('Partials/footer') %>

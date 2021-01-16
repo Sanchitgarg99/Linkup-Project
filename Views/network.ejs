@@ -1,0 +1,48 @@
+<%- include('Partials/header'); %>
+
+<div class="card network-info ">
+  <div class="bottom me-bottom" style="margin-top:0;">
+    <h3 >My Networks</h3>
+    <p class="info "><i class="fas fa-user-friends"></i> Connections <%=subscribers.length%></p>
+    <p class="info "><i class="far fa-id-card"></i> My Contacts <a class="anchor-tags" href="/info"><i class="fas fa-marker"></i></a></p>
+  </div>
+</div>
+
+<div class="network-card">
+  <h1 class="my-friends">People you may know</h1>
+  <%if (count=="true") { %>
+  <%unsubscribers.forEach(function(unsubscriber){%>
+  <div class="card network-info-card">
+    <div class="top">
+      <img class=" home-circle-img" src="data:image/images/png;base64,<%=unsubscriber.data.toString("base64")%>" alt="add image">
+    </div>
+    <div class="bottom">
+      <h1 class="name"><%=unsubscriber.username%></h1>
+      <h3 class="info"><%=unsubscriber.college%></h3>
+      <h3 class="info"><%=unsubscriber.company%></h3>
+        <h2><a class="anchor-tags" href="/friends/<%=unsubscriber.username%>"><i class="fas fa-long-arrow-alt-right"></i></a></h2>
+    </div>
+  </div>
+  <%});%>
+  <% } %>
+</div>
+
+<div class="network-card">
+  <h1 class="my-friends">My Friends</h1>
+  <%subscribers.forEach(function(subscriber){%>
+  <div class="card network-info-card">
+    <div class="top">
+      <img class=" home-circle-img" src="data:image/images/png;base64,<%=subscriber.data.toString("base64")%>" alt="add image">
+    </div>
+    <div class="bottom">
+      <h1 class="name"><%=subscriber.username%></h1>
+      <h3 class="info"><%=subscriber.college%></h3>
+      <h3 class="info"><%=subscriber.company%></h3>
+        <h2><a class="anchor-tags" href="/friends/<%=subscriber.username%>"><i class="fas fa-long-arrow-alt-right"></i></a></h2>
+    </div>
+  </div>
+  <%});%>
+</div>
+
+
+<%- include('Partials/footer'); %>
